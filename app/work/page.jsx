@@ -8,37 +8,51 @@ import Link from "next/link"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import Image from "next/image"
 import WorkSliderBtns from "@/components/WorkSliderBtns"
+import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs } from "react-icons/fa";
+import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
 const projects = [
   {
     num: '01',
     category: 'frontend project',
-    title: 'project 1',
-    description: "Horizon App seamlessly connects and manage multiple bank accounts in one convinient platform",
-    stack: [{ name: 'Tailwindcss' }, { name: 'Javascript' }, { name: 'Next.js' }],
+    title: 'Horizon App',
+    description: "Horizon App seamlessly connects and manages multiple bank accounts in one convenient platform",
+    stack: [
+      { name: 'Tailwindcss', icon: <SiTailwindcss /> },
+      { name: 'Javascript', icon: <FaJs /> },
+      { name: 'Next.js', icon: <SiNextdotjs /> }
+    ],
     image: '/assets/work/horizon.png',
-    live: '',
-    github: '',
+    live: 'https://next-banking-app.vercel.app/',
+    github: 'https://github.com/Moniqchege/next-banking_app',
   },
   {
     num: '02',
-    category: 'ui/ux Design',
-    title: 'project 2',
-    description: "Horizon App seamlessly connects and manage multiple bank accounts in one convinient platform",
-    stack: [{ name: 'Tailwindcss' }, { name: 'Javascript' }, { name: 'Next.js' }],
+    category: 'ui/ux design',
+    title: 'Brainwave',
+    description: "Explore the possibilities of AI Chatting with Brainwave using NextJS.",
+    stack: [
+      { name: 'Tailwindcss', icon: <SiTailwindcss /> },
+      { name: 'Typescript', icon: <FaJs /> },
+      { name: 'React.js', icon: <FaReact /> }
+    ],
     image: '/assets/work/brainwave.png',
-    live: '',
-    github: '',
+    live: 'https://brainwave-lilac-one.vercel.app/',
+    github: 'https://github.com/Moniqchege/UI-UX_Brainwave',
   },
   {
     num: '03',
-    category: 'frontend',
-    title: 'project 3',
-    description: "Horizon App seamlessly connects and manage multiple bank accounts in one convinient platform",
-    stack: [{ name: 'Tailwindcss' }, { name: 'Javascript' }, { name: 'Next.js' }],
+    category: 'ui/ux design',
+    title: 'Putuk App',
+    description: 'Dynamic and user-friendly traveling website that allows users to explore destinations, book trips, and share their travel experiences.',
+    stack: [
+      { name: 'Tailwindcss', icon: <SiTailwindcss /> },
+      { name: 'Typescript', icon: <FaJs /> },
+      { name: 'Next.js', icon: <SiNextdotjs /> }
+    ],
     image: '/assets/work/putuk-app.png',
-    live: '',
-    github: '',
+    live: 'https://travel-weld-eight.vercel.app/',
+    github: 'https://github.com/Moniqchege/travel-app',
   },
 ]
 
@@ -49,12 +63,13 @@ const Work = () => {
     const currentIndex = swiper.activeIndex;
     setProject(projects[currentIndex]);
   }
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ 
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease:'easeIn'}
+        transition: { delay: 2.4, duration: 0.4, ease: 'easeIn' }
       }}
       className='min-h-[80vh] flex flex-col justify-center py-12 xl:px-0'
     >
@@ -72,13 +87,12 @@ const Work = () => {
                 {project.description}
               </p>
               <ul className="flex gap-4">
-                {project.stack.map((item, index) => {
-                  return (
-                    <li key={index} className="text-xl text-accent">
-                      {item.name}
-                    </li>
-                  )
-                })}
+                {project.stack.map((item, index) => (
+                  <li key={index} className="flex items-center gap-2 text-xl text-accent">
+                    <div className='text-3xl'>{item.icon}</div>
+                    <span className='text-xs text-white/60'>{item.name}</span>
+                  </li>
+                ))}
               </ul>
               <div className="border border-white/20"></div>
               <div className="flex items-center gap-4">
@@ -116,21 +130,20 @@ const Work = () => {
               className="xl:h-[520px] mb-12"
               onSlideChange={handleSlideChange}
             >
-              {projects.map((project, index) => {
-                return (
-                  <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10">
-
-                      </div>
-                      <div className="relative w-full h-full">
-                        <Image src={project.image} fill className="object-cover" alt='' />
-                      </div>
+              {projects.map((project, index) => (
+                <SwiperSlide key={index} className="w-full">
+                  <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                    <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                    <div className="relative w-full h-full">
+                      <Image src={project.image} fill className="object-cover" alt='' />
                     </div>
-                  </SwiperSlide>
-                )
-              })}
-              <WorkSliderBtns />
+                  </div>
+                </SwiperSlide>
+              ))}
+              <WorkSliderBtns
+                containerStyles='flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none'
+                btnStyles='bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all'
+              />
             </Swiper>
           </div>
         </div>
