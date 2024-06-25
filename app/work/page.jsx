@@ -14,7 +14,7 @@ import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 const projects = [
   {
     num: '01',
-    category: 'frontend project',
+    category: 'Frontend Project',
     title: 'Horizon App',
     description: "Horizon App seamlessly connects and manages multiple bank accounts in one convenient platform",
     stack: [
@@ -39,6 +39,20 @@ const projects = [
     image: '/assets/work/brainwave.png',
     live: 'https://brainwave-lilac-one.vercel.app/',
     github: 'https://github.com/Moniqchege/UI-UX_Brainwave',
+  },
+  {
+    num: '03',
+    category: 'Fullstack',
+    title: 'Ecommerce Application',
+    description: 'Welcome to your ultimate destination for seamless online shopping. Discover a vast selection of products across various categories, from fashion and electronics to home goods and more. Enjoy personalized recommendations, secure payment options, and fast shipping.',
+    stack: [
+      { name: 'Tailwindcss', icon: <SiTailwindcss /> },
+      { name: 'Typescript', icon: <FaJs /> },
+      { name: 'Next.js', icon: <SiNextdotjs /> }
+    ],
+    image: '/assets/work/ecommerce.png',
+    live: 'https://payment-order-full-stack-ecommerce-hn9z.vercel.app/',
+    github: 'https://github.com/Moniqchege/mern-ecommerce-app',
   },
   {
     num: '03',
