@@ -55,7 +55,7 @@ const projects = [
     github: 'https://github.com/Moniqchege/mern-ecommerce-app',
   },
   {
-    num: '03',
+    num: '04',
     category: 'ui/ux design',
     title: 'Putuk App',
     description: 'Dynamic and user-friendly traveling website that allows users to explore destinations, book trips, and share their travel experiences.',
@@ -69,7 +69,7 @@ const projects = [
     github: 'https://github.com/Moniqchege/travel-app',
   },
   {
-    num: '04',
+    num: '05',
     category: 'ui/ux design',
     title: 'Iphone 15 Website',
     description: 'This is a clone of iPhone 15 Pro website using React.js and TailwindCSS. It highlights the effective use of GSAP and Three.js.',
@@ -83,7 +83,7 @@ const projects = [
     github: 'https://github.com/Moniqchege/iphone/tree/main',
   },
   {
-    num: '05',
+    num: '06',
     category: 'FullStack',
     title: 'Podcastr Application',
     description: 'A cutting-edge AI SaaS platform that enables users to create, discover, and enjoy podcasts with advanced features like text-to-audio conversion with multi-voice AI, podcast thumbnail Image generation and seamless playback.',
