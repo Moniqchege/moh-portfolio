@@ -54,6 +54,35 @@ const projects = [
     live: 'https://travel-weld-eight.vercel.app/',
     github: 'https://github.com/Moniqchege/travel-app',
   },
+  {
+    num: '04',
+    category: 'ui/ux design',
+    title: 'Iphone 15 Website',
+    description: 'This is a clone of iPhone 15 Pro website using React.js and TailwindCSS. It highlights the effective use of GSAP and Three.js.',
+    stack: [
+      { name: 'Tailwindcss', icon: <SiTailwindcss /> },
+      { name: 'React', icon: <FaReact /> },
+      { name: 'Next.js', icon: <SiNextdotjs /> }
+    ],
+    image: '/assets/work/3D-IPhone.png',
+    live: 'https://iphone-doc.vercel.app/',
+    github: 'https://github.com/Moniqchege/iphone/tree/main',
+  },
+  {
+    num: '05',
+    category: 'FullStack',
+    title: 'Podcastr Application',
+    description: 'A cutting-edge AI SaaS platform that enables users to create, discover, and enjoy podcasts with advanced features like text-to-audio conversion with multi-voice AI, podcast thumbnail Image generation and seamless playback.',
+    stack: [
+      { name: 'Tailwindcss', icon: <SiTailwindcss /> },
+      { name: 'Typescript', icon: <FaJs /> },
+      { name: 'Next.js', icon: <SiNextdotjs /> }
+    ],
+    image: '/assets/work/podcastr.png',
+    live: 'https://podcastr-23zf.vercel.app/',
+    github: 'https://github.com/Moniqchege/podcastr',
+  },
+  
 ]
 
 const Work = () => {
