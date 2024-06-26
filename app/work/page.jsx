@@ -56,17 +56,17 @@ const projects = [
   },
   {
     num: '04',
-    category: 'ui/ux design',
-    title: 'Putuk App',
-    description: 'Dynamic and user-friendly traveling website that allows users to explore destinations, book trips, and share their travel experiences.',
+    category: 'React Native',
+    title: 'Aora App',
+    description: 'Built with React Native for seamless user experiences, Animatable for captivating animations, and integrated with the dependable backend systems of Appwrite, this app showcases impressive design and functionality, enabling seamless sharing of AI videos within the community.',
     stack: [
       { name: 'Tailwindcss', icon: <SiTailwindcss /> },
       { name: 'Typescript', icon: <FaJs /> },
       { name: 'Next.js', icon: <SiNextdotjs /> }
     ],
-    image: '/assets/work/putuk-app.png',
-    live: 'https://travel-weld-eight.vercel.app/',
-    github: 'https://github.com/Moniqchege/travel-app',
+    image: '/assets/work/aora.png',
+    live: '',
+    github: 'https://github.com/Moniqchege/aora',
   },
   {
     num: '05',
